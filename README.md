@@ -24,6 +24,13 @@ The build command (see above) creates a runnable jar with dependencies. Run with
 
 The default port is 8080. It can be overwritte using the environment variable **PORT**.
 
+## Endpoints
+
+The app has to endpoints:
+
+* "/" -> Returning a Hello message
+* "/health" -> for Kubernetes readiness and liveness probes
+
 ## Run with Docker / Podman
 
 `podman build -t opentour-hello .`  
