@@ -13,7 +13,7 @@ public class HelloControllerTest {
 
     @Test
     public void testHello() {
-        String expected = "Hello world!";
+        String expected = "Hello worldd!";
 
         HelloController.sayHello(ctx);
         verify(ctx).result(expected);
