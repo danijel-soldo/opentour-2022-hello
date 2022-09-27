@@ -1,5 +1,6 @@
 package com.redhat.opentour;
 
+import static org.mockito.ArgumentMatchers.startsWith;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -13,9 +14,9 @@ public class HelloControllerTest {
 
     @Test
     public void testHello() {
-        String expected = "Hello world!";
+        String expected = "Hello world";
 
         HelloController.sayHello(ctx);
-        verify(ctx).result(expected);
+        verify(ctx).result(startsWith(expected));
     }
 }
